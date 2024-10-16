@@ -1,0 +1,29 @@
+.gallery1-container {
+  margin: 5rem;
+  justify-content: space-around;
+  display: flex;
+}
+
+.gallery-img1 {
+  width: 40%;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 2rem;
+}
+
+@media all and (max-width: 800px) {
+  .gallery1-container {
+    gap: 5rem;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .gallery-img1 {
+    width: 85%;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .gallery1-container {
+    margin: 5rem 2rem;
+  }
+}
