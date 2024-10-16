@@ -8,6 +8,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  padding: 3rem 0;
 }
 
 .menu-container h2 {
@@ -19,14 +20,23 @@
   justify-content: center;
   width: 80%;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 5rem;
 }
 
 .menu-card {
+  align-items: center;
+  flex-direction: column;
+  display: flex;
   border: 5px outset lightgray;
   border-radius: 2rem;
   width: 25rem;
   background-color: #f1f0e5;
+}
+
+.menu-img {
+  margin-top: 1rem;
+  width: 90%;
+  border-radius: 2rem;
 }
 
 .menu-card-content {
