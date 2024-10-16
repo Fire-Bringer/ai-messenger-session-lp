@@ -70,12 +70,13 @@ nav {
   transition: 0.5s;
   z-index: -1;
   transform: translateY(-100%);
-  position: static;
+  position: relative;
   padding: 0;
   flex-direction: row;
   background-color: transparent;
   transform: none;
   margin-bottom: 0;
+  list-style: none;
 }
 
 .nav__links.open {
@@ -102,4 +103,46 @@ nav {
   font-size: 1.5rem;
   color: var(--text-dark);
   background-color: transparent;
+}
+
+
+
+@media (max-width: 768px) {
+  .nav__links {
+    display: none; /* Initially hide the links */
+    flex-direction: column;
+    background-color: var(--text-dark);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    padding: 1rem;
+  }
+
+  .nav__links.open {
+    display: flex; /* Show links when open */
+  }
+
+  /* Style the burger icon */
+  .nav__menu__btn {
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  /* Adjust the padding for small screens */
+  nav {
+    padding: 1.5rem;
+  }
+
+  .nav__btns {
+    display: none;
+  }
+}
+
+
+@media all and (max-width: 600px) {
+  nav {
+    padding: 2rem;
+  }
 }
