@@ -55,10 +55,10 @@ nav {
   font-size: 1.5rem;
   color: var(--white);
   cursor: pointer;
+  display: none;
 }
 
 .nav__links {
-  top: 60px;
   left: 0;
   width: 100%;
   list-style: none;
@@ -128,6 +128,7 @@ nav {
   .nav__menu__btn {
     font-size: 2rem;
     cursor: pointer;
+    display: block;
   }
 
   /* Adjust the padding for small screens */
