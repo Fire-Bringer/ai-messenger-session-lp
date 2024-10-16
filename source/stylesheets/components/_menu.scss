@@ -17,15 +17,15 @@
 .menu-card-container {
   display: flex;
   justify-content: center;
-  width: 90%;
+  width: 80%;
   flex-wrap: wrap;
   gap: 2rem;
 }
 
 .menu-card {
   border: 5px outset lightgray;
-  border-radius: 1rem;
-  width: 20rem;
+  border-radius: 2rem;
+  width: 25rem;
   background-color: #f1f0e5;
 }
 
