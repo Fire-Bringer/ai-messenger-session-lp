@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   tl.from('.hero__right .background', {
     opacity: 0,
     y: 50,
-    duration: 1.5,
+    duration: 1,
     ease: 'power2.out'
   })
   .from('.hero-img1', {
