@@ -29,9 +29,19 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
   const menuBtn = document.getElementById('menu-btn');
   const navLinks = document.getElementById('nav-links');
+  const menuIcon = menuBtn.querySelector('i'); // Get the icon element inside the button
 
   menuBtn.addEventListener('click', () => {
     navLinks.classList.toggle('open'); // Toggle the open class to show/hide the links
+
+    // Toggle between burger and "X" icon
+    if (navLinks.classList.contains('open')) {
+      menuIcon.classList.remove('fa-bars');
+      menuIcon.classList.add('fa-x'); // Change to the "X" icon
+    } else {
+      menuIcon.classList.remove('fa-x');
+      menuIcon.classList.add('fa-bars'); // Change back to the burger icon
+    }
   });
 });
 

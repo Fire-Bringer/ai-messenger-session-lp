@@ -105,6 +105,10 @@ nav {
   background-color: transparent;
 }
 
+.fa-x {
+  display: none;
+}
+
 
 
 @media (max-width: 768px) {
@@ -113,11 +117,14 @@ nav {
     flex-direction: column;
     background-color: var(--text-dark);
     position: absolute;
-    top: 60px;
+    top: 6rem;
     left: 0;
+    background-color: #f1f0e5;
+    height: 90vh;
     width: 100%;
     z-index: 99;
-    padding: 1rem;
+    padding: 5rem;
+    justify-content: flex-start;
   }
 
   .nav__links.open {
