@@ -1,13 +1,14 @@
 .hero {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   background-color: #f1f0e5;
   border-radius: 1rem;
   border: 5px outset lightgray;
-  padding: 2rem 0 0;
+  padding: 2rem;
   margin: 0 5rem;
   gap: 5rem;
+  position: relative;
 }
 
 .hero__left {
@@ -16,8 +17,8 @@
 }
 
 .hero__left h1 {
-  font-size: calc(1.5rem + 2vw);
-  line-height: 4.5rem;
+  font-size: 4em;
+  line-height: 90px;
   font-family: "Cormorant Garamond", serif;
   font-weight: 700;
   font-style: italic;
@@ -25,13 +26,23 @@
   color: #473c34;
 }
 
+.hero__left h6 {
+  font-size: 1.8em;
+  font-family: "Cormorant Garamond", serif;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  color: #473c34;
+}
+
 .hero__left .btn {
+  margin-top: 0.5rem;
   padding: 1rem 2rem;
   letter-spacing: 2px;
   border-radius: 5rem;
   background-color: #FCABD4;
   color: #fff;
   border: 3px outset;
+  width: 50%;
+  font-size: 1.3em;
 }
 
 .hero__left .btn:hover {
@@ -39,27 +50,25 @@
   background-color: var(--primary-color);
 }
 
-.hero__right {
-  position: relative;
-  isolation: isolate;
-  display: grid;
-  gap: 2rem;
+.media-icons {
+  width: 50%;
+  margin-top: 1rem;
 }
 
-.hero__right .background {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: clamp(20rem, 30vw, 30rem);
-  height: clamp(20rem, 30vw, 30rem);
-  background-image: url('/images/back_design1.webp');
-  background-size: cover;
-  background-position: center;
-  border-radius: 1rem;
-  z-index: -1;
-  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
-  gap: 5rem;
+.hero-media {
+  //position: absolute; /* Position it relative to the .hero container */
+  //bottom: 10px; /* Set distance from the bottom */
+  //left: 50%; /* Center horizontally */
+  //transform: translateX(-50%); /* Adjust for perfect centering */
+  font-size: 2.5rem; /* Adjust size if necessary */
+  color: #473c34; /* Customize color */
+  margin-right: 1rem;
+}
+
+.hero__right {
+  position: relative;
+  display: flex;
+  gap: 2rem;
 }
 
 
@@ -80,18 +89,7 @@
 }
 
 .hero-img1 {
-  width: clamp(15rem, 20vw, 20rem);
-  transform: translate(-15rem, 2rem);
-  border-radius: 1rem;
-  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
-}
-
-.hero-img2 {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  overflow: hidden;
-  transform: translate(-6rem, -1rem);
+  width: 30vw;
   border-radius: 1rem;
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
 }
@@ -102,48 +100,37 @@
 @media all and (max-width: 1200px) {
   .hero {
     gap: 7rem;
+    padding: 3rem;
+  }
+  .hero__left h1 {
+    font-size: 3.5em;
   }
 
-}
-
-@media all and (max-width: 1050px) {
-  .hero__right .background {
-    transform: translateX(-60%);
-  }
 }
 
 @media all and (max-width: 1024px) {
   .hero__left .btn {
     padding: 1rem;
   }
-  .hero-img1 {
-    transform: translate(-10rem, 2rem);
+  .hero__left h1 {
+    font-size: 2.5em;
   }
-  .hero-img2 {
-    width: 10rem;
-    height: 10rem;
+  .hero__left h6 {
+    font-size: 1.4em;
   }
 }
 
 @media all and (max-width: 800px) {
   .hero {
-    gap: 0rem;
+    gap: 3rem;
     flex-direction: column-reverse;
   }
   .hero__right {
     width: 100%;
-  }
-  .hero__right .background {
-    transform: translateX(-50%);
-    width: 90%;
+    justify-content: center;
   }
   .hero-img1 {
-    transform: translate(0rem, 2rem);
-  }
-  .hero-img2 {
-    width: 6rem;
-    height: 6rem;
-    transform: translate(6rem, -2rem);
+    width: 40vw;
   }
   .hero__left {
     text-align: center;
@@ -154,16 +141,43 @@
   .hero__left h1, .hero__left .h1 {
     line-height: 4rem;
   }
+  .media-icons {
+    width: 100%;
+  }
 }
 
 @media all and (max-width: 600px) {
   .hero {
     margin: 0 2rem;
   }
+  .hero-img1 {
+    width: 50vw;
+  }
+}
+
+@media all and (max-width: 435px) {
+  .hero-img1 {
+    width: 70vw;
+  }
+  .hero__left h1 {
+    font-size: 2em;
+  }
+  .hero__left h6 {
+    font-size: 1.5em;
+  }
+  .hero__left .btn {
+    width: 100%;
+  }
 }
 
 @media all and (max-width: 400px) {
   .hero {
     margin: 0 1rem;
+  }
+}
+
+@media all and (max-width: 385px) {
+  .hero__left h1 {
+    font-size: 1.8em;
   }
 }

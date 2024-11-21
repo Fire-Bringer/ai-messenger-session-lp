@@ -1,6 +1,6 @@
 .gallery-container {
   margin: 5rem;
-  justify-content: space-around;
+  justify-content: center;
   display: flex;
   gap: 5rem;
 }
@@ -39,12 +39,18 @@
     flex-direction: column;
   }
   .img-wrapper {
-    width: 100%;
+    width: 60%;
   }
 }
 
 @media all and (max-width: 600px) {
   .gallery-container {
     margin: 5rem 2rem;
+  }
+}
+
+@media all and (max-width: 435px) {
+  .img-wrapper {
+    width: 85%;
   }
 }
