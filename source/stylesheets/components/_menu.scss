@@ -30,6 +30,14 @@
   overflow: hidden;
 }
 
+.menu-text1 {
+  display: block;
+}
+
+.menu-text2 {
+  display: none;
+}
+
 .menu-overlay {
   background-color: rgba(0, 0, 0, 0.1);
   height: 100%;
@@ -83,6 +91,12 @@
   }
   .menu-img {
     width: 85%;
+  }
+  .menu-text1 {
+    display: none;
+  }
+  .menu-text2 {
+    display: block;
   }
 }
 
