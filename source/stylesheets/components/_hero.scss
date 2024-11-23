@@ -33,7 +33,7 @@
 }
 
 .hero__left h1 {
-  font-size: 4em;
+  font-size: clamp(1rem, 2.5vw, 3rem);
   line-height: 90px;
   font-family: "Cormorant Garamond", serif;
   font-weight: 700;
@@ -57,7 +57,7 @@
   background-color: #FCABD4;
   color: #fff;
   border: 3px outset;
-  width: 50%;
+  width: 70%;
   font-size: 1.3em;
 }
 
@@ -113,26 +113,25 @@
 
 /* Responsive Media Queries */
 
-@media all and (max-width: 1200px) {
+@media all and (max-width: 1255px) {
   .hero {
     gap: 7rem;
     padding: 3rem;
   }
-  .hero__left h1 {
-    font-size: 3.5em;
-  }
-
 }
 
 @media all and (max-width: 1024px) {
   .hero__left .btn {
     padding: 1rem;
   }
-  .hero__left h1 {
-    font-size: 2.5em;
-  }
   .hero__left h6 {
     font-size: 1.4em;
+  }
+}
+
+@media all and (max-width: 930px) {
+  .hero {
+    gap: 3rem;
   }
 }
 
@@ -155,8 +154,9 @@
   .hero__left .btn {
     margin-bottom: 1rem;
   }
-  .hero__left h1, .hero__left .h1 {
+  .hero__left h1 {
     line-height: 4rem;
+    font-size: clamp(1rem, 4vw, 3rem);
   }
   .media-icons {
     width: 100%;
@@ -176,9 +176,6 @@
   .hero-img1 {
     width: 70vw;
   }
-  .hero__left h1 {
-    font-size: 2.3em;
-  }
   .hero__left h6 {
     font-size: 1.3em;
   }
@@ -194,9 +191,6 @@
 }
 
 @media all and (max-width: 385px) {
-  .hero__left h1 {
-    font-size: 1.8em;
-  }
   .hero__left h6 {
     font-size: 1em;
   }
