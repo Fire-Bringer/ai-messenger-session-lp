@@ -150,6 +150,7 @@
   }
   .hero__left {
     text-align: center;
+    width: 75vw;
   }
   .hero__left .btn {
     margin-bottom: 1rem;
@@ -176,10 +177,10 @@
     width: 70vw;
   }
   .hero__left h1 {
-    font-size: 2em;
+    font-size: 2.3em;
   }
   .hero__left h6 {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
   .hero__left .btn {
     width: 100%;
@@ -196,4 +197,9 @@
   .hero__left h1 {
     font-size: 1.8em;
   }
+  .hero__left h6 {
+    font-size: 1em;
+  }
 }
+
+
