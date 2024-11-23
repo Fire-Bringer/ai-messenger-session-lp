@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuBtn = document.getElementById('menu-btn');
   const navLinks = document.getElementById('nav-links');
   const menuIcon = menuBtn.querySelector('i');
+  const navBar = document.querySelector('nav');
 
   menuBtn.addEventListener('click', () => {
     navLinks.classList.toggle('open');
@@ -38,6 +39,25 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       menuIcon.classList.remove('fa-x');
       menuIcon.classList.add('fa-bars');
+    }
+  });
+
+  // Close menu when a link is clicked
+  const navItems = navLinks.querySelectorAll('a');
+  navItems.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuIcon.classList.remove('fa-x');
+      menuIcon.classList.add('fa-bars');
+    });
+  });
+
+  // Change navbar background on scroll
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) { // Adjust the scroll position threshold as needed
+      navBar.classList.add('scrolled');
+    } else {
+      navBar.classList.remove('scrolled');
     }
   });
 
