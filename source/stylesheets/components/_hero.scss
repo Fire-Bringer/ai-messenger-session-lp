@@ -33,18 +33,30 @@
 }
 
 .hero__left h1 {
-  font-size: clamp(1rem, 2.5vw, 3rem);
-  line-height: 90px;
+  font-size: clamp(3rem, 4vw, 4rem);
   font-family: "Cormorant Garamond", serif;
   font-weight: 700;
-  font-style: italic;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   color: #473c34;
+  margin-bottom: 0;
+}
+
+.hero__left h3 {
+  font-size: clamp(1rem, 2vw, 2rem);
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  color: #473c34;
+  margin-bottom: 0;
+  line-height: 2.5em;
 }
 
 .hero__left h6 {
-  font-size: 1.8em;
-  font-family: "Cormorant Garamond", serif;
+  font-size: 1em;
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   color: #473c34;
 }
@@ -59,6 +71,9 @@
   border: 3px outset;
   width: 70%;
   font-size: 1.3em;
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .hero__left .btn:hover {
@@ -67,7 +82,7 @@
 }
 
 .media-icons {
-  width: 50%;
+  width: 100%;
   margin-top: 1rem;
 }
 
@@ -124,9 +139,6 @@
   .hero__left .btn {
     padding: 1rem;
   }
-  .hero__left h6 {
-    font-size: 1.4em;
-  }
 }
 
 @media all and (max-width: 930px) {
@@ -154,13 +166,6 @@
   .hero__left .btn {
     margin-bottom: 1rem;
   }
-  .hero__left h1 {
-    line-height: 4rem;
-    font-size: clamp(1rem, 5vw, 3rem);
-  }
-  .media-icons {
-    width: 100%;
-  }
 }
 
 @media all and (max-width: 600px) {
@@ -176,9 +181,6 @@
   .hero-img1 {
     width: 70vw;
   }
-  .hero__left h6 {
-    font-size: 1.3em;
-  }
   .hero__left .btn {
     width: 100%;
   }
@@ -187,11 +189,5 @@
 @media all and (max-width: 400px) {
   .hero {
     margin: 0 1rem;
-  }
-}
-
-@media all and (max-width: 385px) {
-  .hero__left h6 {
-    font-size: 1em;
   }
 }
